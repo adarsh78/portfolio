@@ -121,12 +121,12 @@ const Contact = ({ isDarkMode }) => {
         </div>
       </div>
 
-      <div className="flex justify-between items-center text-[11px] pt-5 pb-10 lg:text-[12px]">
+      <div className="flex justify-between items-center text-[0.6rem] pt-5 pb-10 lg:text-[0.8rem]">
         <span>
           <p>&copy;Adarsh Gupta 2024</p>
         </span>
 
-        <span className="flex items-center gap-2 ml-[37px]">
+        <span className="flex items-center gap-2 ml-[55px]">
           <p>Designed with &#x2665; by Deepali</p>
           <IoArrowUpCircleOutline className="text-[22px] cursor-pointer lg:hidden" />
         </span>

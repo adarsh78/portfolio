@@ -23,7 +23,7 @@ const Hero = ({ isDarkMode }) => {
       </div>
 
       <div className="mt-[5rem] lg:mt-[7rem]">
-        <h1 className="text-[37px] font-bree-serif leading-[42px] lg:text-[100px] lg:w-[860px] lg:leading-[105px]">
+        <h1 className="text-[2.3rem] font-bree-serif leading-[42px] lg:text-[6.25rem] lg:w-[860px] lg:leading-[105px]">
           Nice to meet you! I'm{" "}
           <span
             className={`${
