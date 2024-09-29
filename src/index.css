@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+input:focus + label {
+  top: -7px;
+  left: 30px;
+  font-size: 9px;
+  color: hsl(0, 1%, 46%);
+  transition: 0.5s all;
+}
+
+textarea:focus + label {
+    font-size: 9px;
+    left: 85px;
+    top: -7px;
+    color: hsl(0, 1%, 46%);
+    transition: 0.5s all;
+}
+
+input:focus,
+textarea:focus {
+  outline: 0;
+}
