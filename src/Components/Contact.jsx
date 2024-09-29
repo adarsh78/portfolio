@@ -121,7 +121,7 @@ const Contact = ({ isDarkMode }) => {
         </div>
       </div>
 
-      <div className="flex justify-between items-center text-[0.6rem] pt-5 pb-10 lg:text-[0.8rem]">
+      <div className="flex justify-between items-center text-[0.5rem] pt-5 pb-10 lg:text-[0.8rem]">
         <span>
           <p>&copy;Adarsh Gupta 2024</p>
         </span>
