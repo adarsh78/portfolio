@@ -50,4 +50,28 @@ export const skillsData = [
     icon: FaNpm,
     name: "NPM",
   },
+  {
+    icon: FaNpm,
+    name: "NPM",
+  },
+  {
+    icon: FaNpm,
+    name: "NPM",
+  },
+  {
+    icon: FaNpm,
+    name: "NPM",
+  },
+  {
+    icon: FaNpm,
+    name: "NPM",
+  },
+  {
+    icon: FaNpm,
+    name: "NPM",
+  },
+  {
+    icon: FaNpm,
+    name: "NPM",
+  },
 ];

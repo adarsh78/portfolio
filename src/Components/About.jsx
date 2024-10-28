@@ -1,7 +1,7 @@
 import React from "react";
 import { skillsData } from "../Api/skills";
 
-const About = ({ isDarkMode }) => {
+const About = ({ isDarkMode, skillsRef }) => {
   return (
     <>
       <div className="text-center mt-[60px] lg:text-justify lg:mt-[30px]">
@@ -45,10 +45,9 @@ const About = ({ isDarkMode }) => {
           </div>
         </section>
 
-        <h4 className="font-bree-serif text-[20px] mt-8 mb-5 lg:text-[50px] lg:mt-[4rem]">Skills</h4>
+        <h4 ref={skillsRef} className="font-bree-serif text-[20px] mt-8 mb-5 lg:text-[50px] lg:mt-[4rem]">Skills</h4>
 
-        <div
-          className={`border-[1px] ${
+        <div className={`border-[1px] ${
             isDarkMode
               ? "border-[color:hsl(0,7%,76%)]"
               : "border-[color:hsl(0,0%,21%)]"

@@ -1,7 +1,8 @@
-const Work = ({ isDarkMode }) => {
+const Work = ({ isDarkMode, workRef }) => {
   return (
     <>
       <div
+      ref={workRef}
         className={`${
           isDarkMode
             ? "bg-[color:hsla(0,2%,17%,1)]"

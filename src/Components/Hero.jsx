@@ -3,7 +3,24 @@ import { FaDownload } from "react-icons/fa";
 import { FiArrowDownCircle } from "react-icons/fi";
 import { FaGithub, FaLinkedin, FaXTwitter } from "react-icons/fa6";
 
-const Hero = ({ isDarkMode }) => {
+const Hero = ({ isDarkMode, scrollToContact }) => {
+
+  const redirectToGithub = () => {
+    window.open("https://github.com/adarsh78", "_blank", "noopener,noreferrer")
+  }
+
+  const redirectToLinkedIn = () => {
+    window.open("https://www.linkedin.com/in/adarsh78/", "_blank", "noopener,noreferrer")
+  }
+
+  const redirectToTwitter = () => {
+    window.open("https://x.com/adarsh_kgupta", "_blank", "noopener,noreferrer")
+  }
+
+  const downloadResume = () => {
+    window.location.href = "https://code-crusader-portfolio.netlify.app/src/assets/files/Resume_Adarsh_Gupta.pdf"
+  }
+
   return (
     <>
       <div className="absolute right-[70px] hidden lg:flex flex-col gap-4 items-center">
@@ -15,9 +32,9 @@ const Hero = ({ isDarkMode }) => {
               : "border-[color:hsla(0,0%,21%,1)] text-[color:hsla(0,0%,21%,1)]"
           }`}
         >
-          <FaGithub />
-          <FaLinkedin />
-          <FaXTwitter />
+          <FaGithub onClick={redirectToGithub}/>
+          <FaLinkedin onClick={redirectToLinkedIn}/>
+          <FaXTwitter onClick={redirectToTwitter}/>
         </div>
         <div className={`w-[1px] h-[30rem] ${isDarkMode ? "bg-[hsla(0,7%,76%,1)]" : "bg-[hsla(0,0%,21%,1)]"}`}></div>
       </div>
@@ -68,12 +85,16 @@ const Hero = ({ isDarkMode }) => {
       </div>
 
       <div className="flex justify-center gap-5 mt-[60px] text-[12px] font-semibold lg:justify-start lg:mt-[50px]">
-        <button className="hover:bg-[color:hsla(48,71%,70%,1)] bg-[color:hsla(48,71%,49%,1)] text-[color:hsla(0,3%,17%,1)] flex items-center gap-2 px-4 py-2 cursor-pointer rounded-2xl lg:px-8 lg:py-4 lg:rounded-full lg:text-xl">
+        <button 
+        onClick={scrollToContact}
+        className="hover:bg-[color:hsla(48,71%,70%,1)] bg-[color:hsla(48,71%,49%,1)] text-[color:hsla(0,3%,17%,1)] flex items-center gap-2 px-4 py-2 cursor-pointer rounded-2xl lg:px-8 lg:py-4 lg:rounded-full lg:text-xl">
           Contact Me
           <IoMdMail />
         </button>
 
-        <button className="hover:bg-[color:hsla(0,2%,30%,1)] bg-[color:hsla(0,2%,17%,1)] text-[color:hsla(0,7%,76%,1)] flex items-center gap-2 px-6 py-2 cursor-pointer rounded-2xl lg:px-8 lg:py-4 lg:rounded-full lg:text-xl">
+        <button 
+        onClick={downloadResume}
+        className="hover:bg-[color:hsla(0,2%,30%,1)] bg-[color:hsla(0,2%,17%,1)] text-[color:hsla(0,7%,76%,1)] flex items-center gap-2 px-6 py-2 cursor-pointer rounded-2xl lg:px-8 lg:py-4 lg:rounded-full lg:text-xl">
           Resume
           <FaDownload />
         </button>

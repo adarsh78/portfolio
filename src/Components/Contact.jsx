@@ -3,10 +3,29 @@ import { FaLinkedin } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { IoArrowUpCircleOutline } from "react-icons/io5";
 
-const Contact = ({ isDarkMode }) => {
+const Contact = ({ isDarkMode, contactRef, scrollToTop }) => {
+  const redirectToGithub = () => {
+    window.open("https://github.com/adarsh78", "_blank", "noopener,noreferrer");
+  };
+
+  const redirectToLinkedIn = () => {
+    window.open(
+      "https://www.linkedin.com/in/adarsh78/",
+      "_blank",
+      "noopener,noreferrer"
+    );
+  };
+
+  const redirectToTwitter = () => {
+    window.open("https://x.com/adarsh_kgupta", "_blank", "noopener,noreferrer");
+  };
+
   return (
     <>
-      <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center">
+      <div
+        ref={contactRef}
+        className="flex flex-col lg:flex-row lg:justify-between lg:items-center"
+      >
         <div>
           {/* <div className={`${isDarkMode ? "" : "border-t-[1px] border-[color:hsla(0,0%,21%,1)]"}`}></div> */}
           <h3 className="font-bree-serif text-[32px] pt-8 w-[140px] lg:text-[100px] lg:leading-[135px]">
@@ -115,9 +134,9 @@ const Contact = ({ isDarkMode }) => {
         }`}
       >
         <div className="flex justify-end gap-4 lg:hidden text-[21px] cursor-pointer">
-          <FaGithub />
-          <FaLinkedin />
-          <FaXTwitter />
+          <FaGithub onClick={redirectToGithub} />
+          <FaLinkedin onClick={redirectToLinkedIn} />
+          <FaXTwitter onClick={redirectToTwitter} />
         </div>
       </div>
 
@@ -128,7 +147,10 @@ const Contact = ({ isDarkMode }) => {
 
         <span className="flex items-center gap-2 ml-[55px]">
           <p>Designed with &#x2665; by Deepali</p>
-          <IoArrowUpCircleOutline className="text-[22px] cursor-pointer lg:hidden" />
+          <IoArrowUpCircleOutline
+            onClick={scrollToTop}
+            className="text-[22px] cursor-pointer lg:hidden"
+          />
         </span>
 
         <div className="flex gap-8 lg:items-center">
@@ -139,11 +161,14 @@ const Contact = ({ isDarkMode }) => {
                 : "border-[color:hsla(0,0%,21%,1)] text-[color:hsla(0,0%,21%,1)]"
             }`}
           >
-            <FaGithub />
-            <FaLinkedin />
-            <FaXTwitter />
+            <FaGithub onClick={redirectToGithub} />
+            <FaLinkedin onClick={redirectToLinkedIn} />
+            <FaXTwitter onClick={redirectToTwitter} />
           </span>
-          <IoArrowUpCircleOutline className="text-[30px] cursor-pointer hidden lg:block" />
+          <IoArrowUpCircleOutline
+            onClick={scrollToTop}
+            className="text-[30px] cursor-pointer hidden lg:block"
+          />
         </div>
       </div>
     </>
