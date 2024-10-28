@@ -18,7 +18,7 @@ const Hero = ({ isDarkMode, scrollToContact }) => {
   }
 
   const downloadResume = () => {
-    window.location.href = "https://code-crusader-portfolio.netlify.app/src/assets/files/Resume_Adarsh_Gupta.pdf"
+    window.location.href = "/src/assets/files/Resume_Adarsh_Gupta.pdf"
   }
 
   return (
